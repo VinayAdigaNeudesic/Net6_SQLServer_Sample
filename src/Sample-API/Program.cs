@@ -39,7 +39,7 @@ namespace Sample_API
                 dataContext.Database.Migrate();
             }
 
-            app.Run();
+            app..Run();
         }
     }
 }

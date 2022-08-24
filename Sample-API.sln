@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample-API", "src/Sample-API/Sample-API.csproj", "{98656266-E57C-4015-AF1C-9B732CE93639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample-API", "src\Sample-API\Sample-API.csproj", "{98656266-E57C-4015-AF1C-9B732CE93639}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1793A4A3-A02A-40F3-B78E-F49B8319FFC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API-KeyVault", "src\API-KeyVault\API-KeyVault.csproj", "{4E5DD93E-40D2-42EE-BC0C-AFE3C3A9BA39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,17 @@ Global
 		{98656266-E57C-4015-AF1C-9B732CE93639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98656266-E57C-4015-AF1C-9B732CE93639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98656266-E57C-4015-AF1C-9B732CE93639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5DD93E-40D2-42EE-BC0C-AFE3C3A9BA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5DD93E-40D2-42EE-BC0C-AFE3C3A9BA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5DD93E-40D2-42EE-BC0C-AFE3C3A9BA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5DD93E-40D2-42EE-BC0C-AFE3C3A9BA39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98656266-E57C-4015-AF1C-9B732CE93639} = {1793A4A3-A02A-40F3-B78E-F49B8319FFC3}
+		{4E5DD93E-40D2-42EE-BC0C-AFE3C3A9BA39} = {1793A4A3-A02A-40F3-B78E-F49B8319FFC3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F024FE07-125C-47B9-892B-62DB028ADEF0}

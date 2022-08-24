@@ -12,7 +12,7 @@ using Sample_API.Data;
 namespace Sample_API.Migrations
 {
     [DbContext(typeof(EmployeeDbContext))]
-    [Migration("20220810072832_Initial Migration")]
+    [Migration("20220824063327_Initial-Migration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,23 +23,6 @@ namespace Sample_API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("Sample_API.Data.Entities.Department", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Departments");
-                });
 
             modelBuilder.Entity("Sample_API.Data.Entities.Employee", b =>
                 {
@@ -55,34 +38,13 @@ namespace Sample_API.Migrations
                     b.Property<DateTime>("DOB")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DepartmentID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmentID");
-
                     b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("Sample_API.Data.Entities.Employee", b =>
-                {
-                    b.HasOne("Sample_API.Data.Entities.Department", "Department")
-                        .WithMany("Employees")
-                        .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("Sample_API.Data.Entities.Department", b =>
-                {
-                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }

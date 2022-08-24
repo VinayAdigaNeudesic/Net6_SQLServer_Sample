@@ -6,7 +6,6 @@ namespace Sample_API.Data
 {
     public class EmployeeDbContext : DbContext
     {
-        public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public EmployeeDbContext(DbContextOptions<EmployeeDbContext> dbContextOptions) : base(dbContextOptions)
         {
